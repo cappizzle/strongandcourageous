@@ -1,0 +1,111 @@
+<sc-nav></sc-nav>
+
+<header class="masthead home-splash">
+  <div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0 text-uppercase">Strong &amp; Courageous</h1>
+      <h2 class="text-white-25 mx-auto mt-2 mb-5">Be strong. Take Courage. Don't be intimidated.</h2>
+      <a class="btn btn-primary link" [ngx-scroll-to]="'#about'">About Us</a>
+    </div>
+  </div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="about-section text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="text-white mb-4">Who We Are</h2>
+        <p class="text-white-50 text-justify">
+          We are a family that is DEDICATED to helping our Youth and Community become <u>STRONG AND COURAGEOUS</u>. Through events and merchandise sales, we provide services to those in need.
+          Our organization promotes Faith, Strength, Unity, and Love.
+        </p>
+        <p class="text-white-50 mt-5 text-justify">
+            "This is my command — be strong and courageous! Do not be afraid or discouraged. For the Lord your God is with you wherever you go.” <br>
+            <em>Josuha 1:9</em>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vision Section -->
+<section id="vision" class="projects-section bg-light">
+    
+  <div class="container">
+      <h4 class="text-center mb-5">Strong and Courageous Values</h4>
+    <!-- Featured Project Row -->
+    <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+      <div class="col-xl-8 col-lg-7">
+        <img class="img-fluid mb-3 mb-lg-0" src="assets/images/faith-bg.jpg" alt="Strong and Courageous Faith">
+      </div>
+      <div class="col-xl-4 col-lg-5">
+        <div class="featured-text text-center text-xs-left">
+          <h4>Faith</h4>
+          <p class="text-black-50 mb-0 text-justify">
+            {{faith}}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project One Row -->
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+      <div class="col-lg-6">
+        <img class="img-fluid" src="assets/images/demo-image-01.jpg" alt="Strong and Courageous Strength">
+      </div>
+      <div class="col-lg-6">
+        <div class="bg-black text-center h-100 project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-xs-left">
+              <h4 class="text-white">Strength</h4>
+              <p class="mb-0 text-white-50 text-justify">
+                {{strength}}
+              </p>
+              <hr class="d-none d-lg-block mb-0 ml-0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Two Row -->
+    <div class="row justify-content-center no-gutters">
+      <div class="col-lg-6">
+        <img class="img-fluid" src="assets/images/demo-image-02.jpg" alt="Strong and Courageous Unity">
+      </div>
+      <div class="col-lg-6 order-lg-first">
+        <div class="bg-black text-center h-100 project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-xs-left">
+              <h4 class="text-white">Unity</h4>
+              <p class="mb-0 text-white-50 text-justify">
+                {{unity}}
+              </p>
+              <hr class="d-none d-lg-block mb-0 mr-0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row align-items-center no-gutters mt-4 mb-4 mb-lg-5">
+      <div class="col-xl-8 col-lg-7">
+        <img class="img-fluid mb-3 mb-lg-0" src="assets/images/love-bg.jpg" alt="Strong and Courageous Love">
+      </div>
+      <div class="col-xl-4 col-lg-5">
+        <div class="featured-text text-center text-lg-left">
+          <h4>Love</h4>
+          <p class="text-black-50 mb-0 text-justify">
+            {{love}}
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<sc-contact></sc-contact>
+
+<sc-footer></sc-footer>
