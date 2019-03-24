@@ -12,9 +12,10 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from "../environments/environment"
 
-
+// Modules
 import { SharedModule } from "./shared/shared.module"
 import { CoreModule } from "./core/core.module"
+import { StoreModule } from "./store/store.module";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CoreModule } from "./core/core.module"
     AngularFireAuthModule,
     AppRoutingModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    StoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

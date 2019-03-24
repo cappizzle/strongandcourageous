@@ -1,0 +1,33 @@
+<sc-nav></sc-nav>
+
+<header class="masthead shop-splash">
+  <div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center shop">
+      <h1 class="mx-auto my-0 text-uppercase">The Shop</h1>
+      <h2 class="text-dark-25 mx-auto mt-2 mb-5">by Strong &amp; Courageous</h2>
+    </div>
+  </div>
+</header>
+
+<section class="page-section" *ngFor="let item of products">
+  <div class="container">
+    <div class="product-item">
+      <div class="product-item-title d-flex">
+        <div class="bg-faded p-5 d-flex ml-auto rounded">
+          <h2 class="section-heading mb-0">
+            <span class="section-heading-upper">{{ item.title }}</span>
+            <span class="section-heading-lower">{{ item.sub }}</span>
+          </h2>
+        </div>
+      </div>
+      <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{{ item.img }}" alt="{{ item.alt }}">
+      <div class="product-item-description d-flex mr-auto">
+        <div class="bg-faded p-5 rounded">
+          <p class="mb-0 text-justify">{{ item.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<sc-footer></sc-footer>
