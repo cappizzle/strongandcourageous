@@ -8,10 +8,12 @@
 @import 'signup.scss';
 @import 'contact.scss';
 @import "products.scss";
+@import "showcase.scss";
 
 body {
   font-family: 'Nunito';
   letter-spacing: 0.0625em;
+  background-color: #cccccc;
 }
 
 a {
@@ -72,4 +74,8 @@ footer {
     -webkit-text-fill-color: $secondary !important;
    }
   }
+}
+
+.ambassador-splash {
+
 }

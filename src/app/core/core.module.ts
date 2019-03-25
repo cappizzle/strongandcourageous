@@ -9,9 +9,10 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 
 import { HomeComponent } from "./components/home/home.component";
+import { AmbassadorsComponent } from "./components/ambassadors/ambassadors.component"
 
 @NgModule({
-  declarations: [ HomeComponent ],
+  declarations: [ HomeComponent, AmbassadorsComponent ],
   imports: [CommonModule, RouterModule, SharedModule, ScrollToModule.forRoot() ],
   exports: [
     CommonModule,
