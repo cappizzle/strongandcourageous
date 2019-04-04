@@ -13,9 +13,13 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from "../environments/environment"
 
 // Modules
-import { SharedModule } from "./shared/shared.module"
-import { CoreModule } from "./core/core.module"
+import { AdminModule } from './admin/admin.module';
+import { SharedModule } from "./shared/shared.module";
+import { CoreModule } from "./core/core.module";
 import { StoreModule } from "./store/store.module";
+
+// Providers
+import { AdminAuthGuardService } from './shared/services/admin-auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -31,9 +35,10 @@ import { StoreModule } from "./store/store.module";
     AppRoutingModule,
     SharedModule,
     CoreModule,
-    StoreModule
+    StoreModule,
+    AdminModule
   ],
-  providers: [],
+  providers: [AdminAuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

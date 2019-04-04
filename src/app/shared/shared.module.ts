@@ -16,6 +16,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { NavigationComponent } from "./components/navigation/navigation.component";
 import { ContactComponent } from "./components/contact/contact.component"
 import { FooterComponent } from "./components/footer/footer.component";
+import { ProductCardComponent } from "./components/product-card/product-card.component";
+import { ProductQuantityComponent } from "./components/product-quantity/product-quantity.component";
 
 // Services
 import { AdminAuthGuardService } from "./services/admin-auth-guard.service";
@@ -28,19 +30,23 @@ import { ProductService } from './services/product.service';
 import { ShoppingCartService } from './services/shopping-cart.service';
 import { UserService } from './services/user.service';
 import { SeoService } from "./services/seo.service";
+import { DataTableModule } from 'angular-6-datatable';
 
 @NgModule({
-  declarations: [ NavigationComponent, ContactComponent, FooterComponent ],
-  imports: [CommonModule, RouterModule, NgbModule.forRoot(), ScrollToModule.forRoot()],
+  declarations: [ NavigationComponent, ContactComponent, FooterComponent, ProductCardComponent, ProductQuantityComponent ],
+  imports: [CommonModule, RouterModule, NgbModule.forRoot(), ScrollToModule.forRoot(), DataTableModule],
   exports: [
     CommonModule,
+    ProductCardComponent,
+    ProductQuantityComponent,
     FormsModule,
     NavigationComponent,
     ContactComponent,
     FooterComponent,
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    DataTableModule
   ],
   providers: [
     AdminAuthGuardService,

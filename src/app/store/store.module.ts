@@ -3,31 +3,41 @@ import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { FormsModule } from "@angular/forms";
 
-// Angular Fire
-import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireStorageModule } from '@angular/fire/storage';
-
 // Modules
 import { SharedModule } from "../shared/shared.module";
 
 // Components
 import { ProductsComponent } from "./components/products/products.component";
-
+import { CheckOutComponent } from "./components/check-out/check-out.component";
+import { MyOrdersComponent } from "./components/my-orders/my-orders.component";
+import { OrderSuccessComponent } from "./components/order-success/order-success.component"; 
+import { ProductDetails } from "./components/product-details/product-details.component";
+import { ShippingFormComponent } from "./components/shipping-form/shipping-form.component";
+import { ShoppingCartComponent } from "./components/shopping-cart/shopping-cart.component";
+import { ShoppingCartSummaryComponent } from "./components/shopping-cart-summary/shopping-cart-summary.component";
 
 @NgModule({
-  declarations: [ ProductsComponent ],
-  imports: [CommonModule, RouterModule, SharedModule],
-  exports: [
-    CommonModule,
-    FormsModule,
-    AngularFireDatabaseModule,
-    AngularFireAuthModule,
-    AngularFireStorageModule
+  declarations: [ 
+    ProductsComponent,
+    CheckOutComponent,
+    MyOrdersComponent,
+    OrderSuccessComponent,
+    ProductDetails,
+    ShippingFormComponent,
+    ShoppingCartComponent,
+    ShoppingCartSummaryComponent 
   ],
-  providers: [
-    AngularFireDatabaseModule,
-    AngularFireAuthModule,
-  ]
+  exports: [
+    ProductsComponent,
+    CheckOutComponent,
+    MyOrdersComponent,
+    OrderSuccessComponent,
+    ProductDetails,
+    ShippingFormComponent,
+    ShoppingCartComponent,
+    ShoppingCartSummaryComponent 
+  ],
+  imports: [CommonModule, RouterModule, SharedModule, FormsModule],
+  
 })
 export class StoreModule {}

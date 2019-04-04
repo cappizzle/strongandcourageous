@@ -11,14 +11,14 @@
     }
   }
   .navbar-brand {
-    color: $secondary;
+    color: $white;
     font-weight: 700;
     padding: .9rem 0;
   }
   .navbar-nav {
     .nav-item {
       .nav-link {
-        color: $secondary;
+        color: $white;
       }
       &:hover {
         color: fade(white, 80%);
@@ -40,37 +40,37 @@
     transition: background-color 0.3s ease-in-out;
     .navbar-brand {
       padding: .5rem 0;
-      color: $secondary;
+      color: $white;
     }
     .nav-link {
       transition: none;
       padding: 2rem 1.5rem;
-      color: $secondary;
+      color: $white;
       &:hover {
-        color: fade-out($secondary, .25);
+        color: fade-out($white, .25);
       }
       &:active {
-        color: $secondary;
+        color: $white;
       }
     }
     &.navbar-shrink {
       background-color: $black;
       border-bottom: .15rem solid $white;
       .navbar-brand {
-        color: $secondary;
+        color: $white;
       }
       .nav-link {
-        color: $secondary;
+        color: $white;
         padding: 1.5rem 1.5rem 1.25rem;
         border-bottom: 0.25rem solid transparent;
         &:hover {
-          color: $secondary;
+          color: $white;
         }
         &:active {
           color: darken($white, 15%);
         }
         &.active {
-          color: $secondary;
+          color: $white;
           outline: none;
           border-bottom: 0.25rem solid $rust;
         }

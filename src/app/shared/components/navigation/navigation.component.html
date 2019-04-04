@@ -15,8 +15,40 @@
           <a class="nav-link" routerLink="/ambassadors">Ambassadors</a>
         </li> 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/shop" routerLinkActive="router-link-active">Shop</a>
+          <a routerLink="/shop" class="nav-link">Shop</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/shopping-cart">
+            My Cart
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <span
+              class="badge badge-info badge-pill"
+              *ngIf="(cart$ | async) as cart"
+            >
+              {{ cart.totalItemsCount }}
+            </span>
+          </a>
+        </li>
+        
+        <ng-template #anonymousUser>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login" (click)="login">Login</a> 
+          </li>
+        </ng-template>
+        <li *ngIf="appUser as user; else anonymousUser" class="nav-item dropdown" ngbDropdown>
+            <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" style="cursor: pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
+              {{ user.name }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownPortfolio" ngbDropdownMenu>
+              <a class="dropdown-item" routerLink="/my-orders">My Orders</a>
+              <ng-container *ngIf="user.isAdmin">
+                <!-- <a class="dropdown-item" routerLink="/admin/orders">Manage Orders</a>
+                <a class="dropdown-item" routerLink="/admin/products">Manage Products</a> -->
+                <a class="dropdown-item" routerLink="/admin/">Admin Panel</a>
+              </ng-container>            
+              <a class="dropdown-item" (click)="logout()" style="cursor:pointer">Log Out</a>
+            </div>
+          </li>
       </ul>
     </div>
   </div>

@@ -1,0 +1,25 @@
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Customer</th>
+        <th>Address</th>
+        <th>Items</th>
+        <th>Order Date</th>
+        <!-- <th></th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of (orders$ | async)">
+        <td>{{ order.payload.val().shipping.name }}</td>
+        <td>{{ order.payload.val().shipping.addressLine1 }}, {{order.payload.val().shipping.city}}, {{order.payload.val().shipping.postal}}</td>
+        <td>
+          <ul class="list-unstyled">
+            <li class="list-item" *ngFor="let item of order.payload.val().items">{{item.quantity}}x {{item.product.title}}</li>
+          </ul>
+        </td>
+        <td>{{ order.payload.val().datePlaced | date }}</td>
+        <!-- <td><a href="#">View</a></td> -->
+      </tr>
+    </tbody>
+  </table>

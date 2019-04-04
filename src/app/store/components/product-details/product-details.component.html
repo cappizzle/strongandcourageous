@@ -1,0 +1,73 @@
+<section class="container">
+  <div class="row">
+
+    <div class="col-lg-4">
+      <div class="card mt-4">
+        <img class="card-img-top img-fluid" [src]="product.imageUrl" alt="{{ product.title }}">
+        <div class="card-body">
+          <h3 class="card-title">{{ product.title }}</h3>
+          <h4>${{ product.price }}</h4>
+          <p class="card-text">
+            {{ product.description }}
+          </p>
+          <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+          4.0 stars
+        </div>
+      </div>
+      <!-- /.card -->
+    </div>
+    <!-- /.col-lg-3 -->
+
+    <div class="col-lg-8">
+
+      <div class="card card-outline-secondary my-4">
+        <div class="card-header">
+          Product Reviews
+        </div>
+        <div class="card-body">
+          <div *ngFor="let review of reviews">
+            <p>{{review.review}}</p>
+            <small class="text-muted">Posted by {{review.author}} on {{review.date | date : 'mediumDate'}}</small>
+            <hr>
+          </div>
+          <button type="button" class="btn btn-primary" (click)="reviewProduct()" *ngIf="!leaveReview">Leave Review</button>
+          <div class="container" *ngIf="leaveReview">
+            <form #f="ngForm" (ngSubmit)="save(f.value)">
+              <div class="form-group">
+                <label for="author">Please Leave Your Name</label>
+                <input 
+                  #author="ngModel"
+                  [(ngModel)]="review.author"
+                  name="author"
+                  id="author"
+                  type="text"
+                  class="form-control"
+                 >
+              </div>
+              <div class="form-group">
+                <label for="review">Please Leave Your Comment</label>
+                <textarea
+                  #review="ngModel"
+                  [(ngModel)]="review.review"
+                  name="review"
+                  id="review"
+                  type="text"
+                  class="form-control"
+                  cols="30" 
+                  rows="10">
+                </textarea>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-success">Post Review</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- /.card -->
+
+    </div>
+    <!-- /.col-lg-9 -->
+
+  </div>
+</section>

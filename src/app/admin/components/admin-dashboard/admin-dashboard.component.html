@@ -1,0 +1,64 @@
+<div id="wrapper">
+  <sc-admin-side-nav></sc-admin-side-nav>
+  <div class="container-fluid">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+      <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-8 col-lg-7">
+        <div class="card shadow mb-4">
+          <!-- Card Header - Dropdown -->
+          <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">Orders</h6>                
+          </div>
+          <!-- Card Body -->
+          <div class="card-body">
+            <app-admin-orders></app-admin-orders>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-5">
+        <div class="card shadow mb-4">
+          <!-- Card Header - Dropdown -->
+          <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">Revenue</h6>
+          </div>
+          <!-- Card Body -->
+          <div class="card-body">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Content Column -->
+      <div class="col-12 mb-4">
+
+          <!-- Project Card Example -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Products</h6>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="mx-auto my-3">
+                  <button class="btn btn-outline-dark" (click)="showProductForm()">ADD PRODUCT</button>
+                </div>
+              </div>
+              <app-admin-products></app-admin-products>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mb-4" *ngIf="productForm">
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Add a New Product</h6>
+            </div>
+            <div class="card-body">
+              <app-product-form></app-product-form>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>      
+</div>
