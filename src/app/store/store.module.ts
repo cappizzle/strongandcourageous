@@ -15,6 +15,7 @@ import { ProductDetails } from "./components/product-details/product-details.com
 import { ShippingFormComponent } from "./components/shipping-form/shipping-form.component";
 import { ShoppingCartComponent } from "./components/shopping-cart/shopping-cart.component";
 import { ShoppingCartSummaryComponent } from "./components/shopping-cart-summary/shopping-cart-summary.component";
+import { ProductFilterComponent } from "./components/products/product-filter/product-filter.component";
 
 @NgModule({
   declarations: [ 
@@ -25,7 +26,8 @@ import { ShoppingCartSummaryComponent } from "./components/shopping-cart-summary
     ProductDetails,
     ShippingFormComponent,
     ShoppingCartComponent,
-    ShoppingCartSummaryComponent 
+    ShoppingCartSummaryComponent,
+    ProductFilterComponent 
   ],
   exports: [
     ProductsComponent,
@@ -35,7 +37,8 @@ import { ShoppingCartSummaryComponent } from "./components/shopping-cart-summary
     ProductDetails,
     ShippingFormComponent,
     ShoppingCartComponent,
-    ShoppingCartSummaryComponent 
+    ShoppingCartSummaryComponent,
+    ProductFilterComponent
   ],
   imports: [CommonModule, RouterModule, SharedModule, FormsModule],
   

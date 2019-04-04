@@ -1,4 +1,4 @@
-<div *ngIf="product.title && shoppingCart" class="card">
+<!-- <div *ngIf="product.title && shoppingCart" class="card">
   <img
     class="card-img-top"
     [src]="product.imageUrl"
@@ -27,4 +27,33 @@
       ></app-product-quantity>
     </ng-template>
   </div>
-</div>
+</div> -->
+
+<div class="product-item">
+    <div class="product-item-title d-flex">
+      <div class="bg-faded p-5 d-flex ml-auto rounded">
+        <h2 class="section-heading mb-0">
+          <span class="section-heading-upper"><a routerLink="/product-details" [queryParams]="{ product: product.slug }">{{ product.title }}</a></span>
+          <span class="section-heading-lower">{{ item.sub }}</span>
+        </h2>
+      </div>
+    </div>
+    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" [src]="product.imageUrl" *ngIf="product.imageUrl" alt="{{ product.title }}">
+    <div class="product-item-description d-flex mr-auto">
+      <div class="bg-faded p-5 rounded">
+        <p class="mb-0 text-justify">{{ item.desc }}</p>
+        <div class="col-12 no-gutters py-3">
+          <button *ngIf="shoppingCart?.getQuantity(product) === 0; else updateQuantity" class="btn btn-primary btn-block" (click)="addToCart()" >
+            Add to Cart
+          </button>
+          <ng-template #updateQuantity>
+            <app-product-quantity
+              [product]="product"
+              [shopping-cart]="shoppingCart"
+            ></app-product-quantity>
+          </ng-template>
+        </div>
+      </div>
+
+    </div>
+  </div>

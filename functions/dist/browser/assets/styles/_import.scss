@@ -1,0 +1,84 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'navbar.scss';
+@import 'masthead.scss';
+@import 'buttons.scss';
+@import 'about.scss';
+@import 'projects.scss';
+@import 'signup.scss';
+@import 'contact.scss';
+@import "products.scss";
+@import "showcase.scss";
+@import "login.scss";
+
+@import "./admin/admin.scss";
+
+body {
+  font-family: 'Nunito';
+  letter-spacing: 0.0625em;
+  background-color: #cccccc;
+}
+
+a {
+  color: $primary;
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: darken($primary, 20%);
+  }
+}
+
+.page-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.section-heading {
+  text-transform: uppercase;
+  .section-heading-upper {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  .section-heading-lower {
+    display: block;
+    font-size: 3rem;
+    font-weight: 100;
+  }
+}
+
+.bg-black {
+  background-color: $black !important;
+}
+
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+footer {
+  padding: 5rem 0;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.home-splash {
+  background-image: url('assets/images/splash.jpg');
+}
+
+.shop-splash {
+  background-image: url('assets/images/shop-splash.jpg');
+  .shop {
+   h1, h2 {
+    -webkit-text-fill-color: $secondary !important;
+   }
+  }
+}
+
+.ambassador-splash {
+
+}

@@ -17,7 +17,7 @@ export class NavigationComponent implements OnInit {
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private auth: AuthService,
-    private cartService: ShoppingCartService
+    private cartService: ShoppingCartService 
   ){
     
   }
@@ -34,9 +34,13 @@ export class NavigationComponent implements OnInit {
     this.auth.logout();
   }
 
+  login = () => {
+    this.auth.login();
+  }
+
   async ngOnInit() {
     this.auth.appUser$.subscribe(appUser => (this.appUser = appUser));
-    // this.cart$ = await this.cartService.getCart();
+    this.cart$ = await this.cartService.getCart();
 
   }
 }

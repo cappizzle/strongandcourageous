@@ -5,9 +5,9 @@ import { Component } from "@angular/core";
   templateUrl: "./admin-dashboard.component.html"
 })
 export class AdminDashboardComponent {
-  private productForm: boolean
+  public productForm: boolean
 
-  private showProductForm = () => {
+  showProductForm = () => {
     this.productForm = !this.productForm
   }
 }

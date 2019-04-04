@@ -9,6 +9,7 @@ import { AdminAuthGuardService } from "./shared/services/admin-auth-guard.servic
 import { HomeComponent } from "./core/components/home/home.component"
 import { ProductsComponent } from "./store/components/products/products.component"
 import { AmbassadorsComponent } from "./core/components/ambassadors/ambassadors.component";
+import { AboutComponent } from './core/components/about/about.component';
 
 import { LoginComponent } from "./core/components/login/login.component"
 
@@ -25,11 +26,13 @@ import { AdminProductsComponent } from "./admin/components/admin-products/admin-
 import { ProductFormComponent } from "./admin/components/product-form/product-form.component";
 import { AdminDashboardComponent } from './admin/components/admin-dashboard/admin-dashboard.component';
 
+
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "shop", component: ProductsComponent },
   { path: "ambassadors", component: AmbassadorsComponent },
   { path: "login", component: LoginComponent },
+  { path: "about", component: AboutComponent },
   {
     path: "order-success",
     component: OrderSuccessComponent,
