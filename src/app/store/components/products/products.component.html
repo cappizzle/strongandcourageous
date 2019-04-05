@@ -11,7 +11,6 @@
 
 <section class="page-section" *ngFor="let item of products">
   <div class="container">
-    <div class="col-12"><app-product-filter [category]="category"></app-product-filter></div>
     <ng-container *ngFor="let p of filteredProducts; let i = index">
       <div class="col" *ngIf="(cart$ | async) as cart">
         <app-product-card

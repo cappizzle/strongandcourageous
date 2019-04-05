@@ -1,5 +1,5 @@
-<section class="container">
-  <form #f="ngForm">
+  <div class="container">
+    <form #f="ngForm">
       <div class="form-group">
         <label for="">Name</label>
         <input
@@ -22,7 +22,6 @@
           [(ngModel)]="shipping.addressLine1"
           type="text"
           class="form-control"
-          placeholder="Line 1"
           required
         />
         <div
@@ -86,4 +85,4 @@
         Place Order
       </button>
     </form>
-</section>
+  </div>

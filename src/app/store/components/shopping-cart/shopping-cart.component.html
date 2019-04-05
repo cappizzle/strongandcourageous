@@ -1,5 +1,7 @@
-<section class="container">
-  <h1>Shopping Cart</h1>
+<sc-nav></sc-nav>
+<section class="page-section about-heading py-5">
+  <div class="container">
+    <h1>Shopping Cart</h1>
   <div class="card" *ngIf="(cart$ | async) as cart" style="width: 80%;">
     <div class="card-body">
       <p>
@@ -61,5 +63,6 @@
         </tr>
       </tfoot>
     </table>
+  </div>
   </div>
 </section>

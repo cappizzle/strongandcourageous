@@ -19,6 +19,7 @@ import { MyOrdersComponent } from "./store/components/my-orders/my-orders.compon
 import { OrderSuccessComponent } from "./store/components/order-success/order-success.component"
 import { ProductDetails } from './store/components/product-details/product-details.component';
 import { ShoppingCartComponent } from './store/components/shopping-cart/shopping-cart.component';
+import { ShippingFormComponent } from "./store/components/shipping-form/shipping-form.component";
 
 // Admin Components
 import { AdminOrdersComponent } from "./admin/components/admin-orders/admin-orders.component";
@@ -36,6 +37,11 @@ const routes: Routes = [
   {
     path: "order-success",
     component: OrderSuccessComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: "shipping-form",
+    component: ShippingFormComponent,
     canActivate: [AuthGuardService]
   },
   {

@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 import { AuthService } from '../../../shared/services/auth.service';
 import { OrderService } from '../../../shared/services/order.service';
 import { Order } from '../../../shared/models/order';
+import { SeoService } from "../../../shared/services/seo.service"
 
 @Component({
   selector: 'app-shipping-form',
@@ -19,13 +20,15 @@ export class ShippingFormComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private authService: AuthService,
-    private orderService: OrderService
+    private orderService: OrderService,
+    private seo: SeoService
   ) {}
 
   ngOnInit() {
     this.userSubscription = this.authService.user$.subscribe(
       user => (this.userId = user.uid)
     );
+    this.seo.generateTags({ title: "Shipping Information" })
   }
 
   ngOnDestroy() {
