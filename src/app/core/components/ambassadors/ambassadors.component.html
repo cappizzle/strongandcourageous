@@ -11,8 +11,8 @@
   <div class="container-fluid p-0">
     <div class="row no-gutters" *ngFor="let a of ambassadors; index as i">
 
-      <div [ngClass]="i % 2 === 0 ? 'col-lg-6 order-lg-2 text-white showcase-img' : 'col-lg-6 text-white showcase-img'" [ngStyle]="getImage(i)"></div>
-      <div [ngClass]="i % 2 === 0 ? 'col-lg-6 order-lg-1 my-auto showcase-text' : 'col-lg-6 my-auto showcase-text'">
+      <div [ngClass]="i % 2 === 0 ? 'col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 order-lg-2 text-white showcase-img' : 'col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 text-white showcase-img'" [ngStyle]="getImage(i)"></div>
+      <div [ngClass]="i % 2 === 0 ? 'col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 order-lg-1 my-auto showcase-text' : 'col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 my-auto showcase-text'">
         <h2>{{a.name}}</h2>
         <p class="lead mb-0">{{ a.bio }}</p>
       </div>

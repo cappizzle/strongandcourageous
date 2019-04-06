@@ -19,15 +19,15 @@ export class AmbassadorsComponent implements OnInit {
   public ambassadors: any[] = [
     {
       name: "Lauren Engle",
-      image: "assets/images/LaurenEngle.jpeg",
+      image: "assets/images/LaurenEngle.jpg",
       imageAlt: "Lauren Engle",
       bio: ""
     },
     {
       name: "John Waller",
-      image: "",
-      imageAlt: "",
-      bio: ""
+      image: "assets/images/JohnWaller.jpg",
+      imageAlt: "John Waller",
+      bio: "Some sample bio text"
     }
   ]
 
